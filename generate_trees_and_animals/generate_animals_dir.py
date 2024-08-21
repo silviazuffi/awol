@@ -65,7 +65,7 @@ if __name__ == '__main__':
     #file1 = "out_testset_animal_realnvp_mask_animal_clip_features_testset_interpolation.npy" 
     file1 = "out_testset_animals_eccv_animal_clip_features_testset_interpolation.npy" 
 
-    model_filename = '../animals/my_smpl_0791_to_root_n_skel_n_back_joints_leg_scaled_all.pkl'
+    model_filename = '../awol/data/animal/smal_plus.pkl'
     smpl = load_model(model_filename)
 
     mv = MeshViewer()

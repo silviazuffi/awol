@@ -30,7 +30,7 @@ flags.DEFINE_boolean('testset', False, '')
 flags.DEFINE_boolean('images', False, '')
 flags.DEFINE_integer('n_pred_samples', 1, '')
 flags.DEFINE_float('sigma', 1., '')
-flags.DEFINE_string('images_dir', '', '')
+flags.DEFINE_string('img_dir', '', '')
 flags.DEFINE_string('extension', 'jpg', '')
 
 import open_clip
@@ -67,7 +67,7 @@ def predict():
 
 
     clip_model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='laion2b_s34b_b79k')
-    files = glob(join(opts.images_dir, '*.'+opts.extension))
+    files = glob(join(opts.img_dir, '*.'+opts.extension))
     out = np.zeros((n_samples, out_dim))
     for filename in files:
         raw_image = Image.open(filename) 

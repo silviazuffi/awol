@@ -22,8 +22,9 @@ import pickle as pkl
 flags.DEFINE_integer('n_data_workers', 4, 'Number of data loading workers')
 flags.DEFINE_integer('num_samples', 10000, 'Number of samples')
 flags.DEFINE_boolean('shuffle', True, '')
-flags.DEFINE_string('animal_data_file', 'my_smpl_data_0791_to_root_n_skel_n_back_joints_leg_scaled_all.pkl', 'File that contains the shape variables')
+flags.DEFINE_string('animal_data_file', 'smpl_plus_data.pkl', 'File that contains the shape variables')
 flags.DEFINE_string('object_dir', '/home/szuffi/projects/awol/awol/data/', 'Data Directory')
+flags.DEFINE_string('images_dir', '/home/szuffi/projects/awol/awol/data/', 'Data Directory')
 flags.DEFINE_boolean('compress_params', False, 'Used by trees')
 flags.DEFINE_boolean('normalize', False, 'Use by trees')
 flags.DEFINE_boolean('use_images', False, '')
@@ -155,7 +156,7 @@ class ObjectDataset(Dataset):
                     for idx, animal in enumerate(animal_species):
                         print(animal)
                         # Read the images and generate an entry for each image
-                        img_path = join(opts.object_dir, opts.object, 'training_set', animal_dir_name[animal])
+                        img_path = join(opts.images_dir, opts.object, 'training_set', animal_dir_name[animal])
                         I = sorted(glob(join(img_path, '*.jpg')))
                         print(len(I))
                         if len(I) == 0:
@@ -213,7 +214,7 @@ class ObjectDataset(Dataset):
                                 if self.opts.map_categorical:
                                     params = map_categorical(params, direction='encode')
                                 # Read the images and generate an entry for each image
-                                img_path = join(opts.object_dir, opts.object, 'training_set', tree)
+                                img_path = join(opts.images_dir, opts.object, 'training_set', tree)
                                 I = sorted(glob(join(img_path, '*.jpg')))
                                 print(len(I))
                                 for filename in I[k:k+1]:
