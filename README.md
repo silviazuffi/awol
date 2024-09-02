@@ -44,6 +44,7 @@ The CLIP encodings for the text are precomputed in the directory 'awol/code/data
 To generate the animals and trees from the predicted shape parameters, run the code in the directory 'generate_trees"and_animals'. 
 Note that to generate the trees you need Blender with the tree-gen add on (https://github.com/friggog/tree-gen)
 
+Thanks to Peter Kulits (https://kulits.github.io/) for the ```inference.ipynb``` code.
 
 ## Citation
 
