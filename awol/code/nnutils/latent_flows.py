@@ -7,8 +7,6 @@ import math
 import types
 
 import numpy as np
-import scipy as sp
-import scipy.linalg
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
