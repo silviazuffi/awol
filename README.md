@@ -1,6 +1,6 @@
 # awol
 
-This repository contains the code for the method described in the paper : _AWOL: Analysis WithOut synthesis using Language, by Silvia Zuffi and Michael J. Black, ECCV 2024.
+This repository contains the code for the method described in the paper : _AWOL: Analysis WithOut synthesis using Language_, by Silvia Zuffi and Michael J. Black, ECCV 2024.
 
 ![teaser](./images/teaser.png)
 
