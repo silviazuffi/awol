@@ -13,7 +13,7 @@ Animate = True
 
 if __name__ == '__main__':
 
-    model_filename = '../awol/data/animal/smal_plus.pkl'
+    model_filename = '../awol/data/animal/smal_plus_nochumpy.pkl'
     smpl = load_model(model_filename)
 
     mv = MeshViewer()

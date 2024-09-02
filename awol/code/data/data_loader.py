@@ -22,7 +22,7 @@ import pickle as pkl
 flags.DEFINE_integer('n_data_workers', 4, 'Number of data loading workers')
 flags.DEFINE_integer('num_samples', 10000, 'Number of samples')
 flags.DEFINE_boolean('shuffle', True, '')
-flags.DEFINE_string('animal_data_file', 'smpl_plus_data.pkl', 'File that contains the shape variables')
+flags.DEFINE_string('animal_data_file', 'smal_plus_data.pkl', 'File that contains the shape variables')
 flags.DEFINE_string('object_dir', '/home/szuffi/projects/awol/awol/data/', 'Data Directory')
 flags.DEFINE_string('images_dir', '/home/szuffi/projects/awol/awol/data/', 'Data Directory')
 flags.DEFINE_boolean('compress_params', False, 'Used by trees')
