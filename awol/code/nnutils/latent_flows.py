@@ -141,6 +141,7 @@ class CouplingLayer(nn.Module):
         '''
         mask = self.mask
         if self.train_mask:
+            #  In the case of train mask the invert variable is not used, and there is no split (create duplicated masked variables)
             masked_inputs = mask.forward(inputs, self.invert, cond_inputs)
             inv_masked_input = mask.forward(inputs, ~self.invert, cond_inputs)
         else:
